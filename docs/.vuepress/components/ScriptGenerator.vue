@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <Form ref="form" :model="form" inline>
+    <Form ref="form" :model="form" inline :rules="rules">
       <FormItem prop="username">
         <Input type="text" v-model="form.username" placeholder="账号"></Input>
       </FormItem>
@@ -41,8 +41,11 @@
           </Option>
         </Select>
       </FormItem>
+
       <FromItem>
-        <Button type="success" @click="handleClick()">生成</Button>
+        <Button type="success" @click="handleClick()" :disabled="isValid()"
+          >生成</Button
+        >
       </FromItem>
     </Form>
 
@@ -72,7 +75,10 @@ export default {
         carrier: "",
         platform: "",
       },
-      rules: {},
+      rules: {
+        username: [{ required: true, message: "请输入账号" }],
+        password: [{ required: true, message: "请输入密码" }],
+      },
       carrierList: carrierList,
       platformList: platformList,
       code: "",
@@ -81,6 +87,9 @@ export default {
   methods: {
     handleClick() {
       alert("click");
+    },
+    isValid() {
+      return !Object.keys(this.form).every((k) => this.form[k]);
     },
   },
 };

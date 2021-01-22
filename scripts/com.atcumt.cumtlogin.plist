@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <!-- 唯一标识 -->
+        <key>CumtLogin</key>
+        <string>com.atcumt.cumtlogin</string>
+
+        <!-- 脚本目录 -->
+        <key>ProgramArguments</key>
+        <array>
+            <string>/usr/local/cumtlogin/login.sh</string>
+        </array>
+
+        <!-- 运行时间 -->
+        <key>StartCalendarInterval</key>
+        <dict>
+            <key>Minute</key>
+            <integer>18</integer>
+            <key>Hour</key>
+            <integer>7</integer>
+        </dict>
+
+        <!-- 标准输出目录 -->
+        <key>StandardOutPath</key>
+        <string>/usr/local/cumtlogin/log.txt</string>
+
+        <!-- 错误输出目录 -->
+        <key>StandardOutPath</key>
+        <string>/usr/local/cumtlogin/error.txt</string>
+    </dict>
+</plist>
