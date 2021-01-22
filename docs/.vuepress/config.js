@@ -15,5 +15,6 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+    dest: './dist',
 }
