@@ -12,9 +12,9 @@ inputs:
   protocol: http
   hosts:
     - host: cumtlogin.atcumt.com
-    autoRefresh: true
-    https:
-      switch: on
-      http2: on
-      certInfo:
-        certId: 'jmdjcz5k'
+      autoRefresh: true
+      https:
+        switch: on
+        http2: on
+        certInfo:
+          certId: 'jmdjcz5k'
