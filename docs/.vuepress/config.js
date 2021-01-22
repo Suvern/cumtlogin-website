@@ -17,4 +17,7 @@ module.exports = {
         ]
     },
     dest: './dist',
+    head: [
+        ['link', { rel: 'icon', href: '/assets/studio.png' }]
+    ]
 }
